@@ -1,0 +1,109 @@
+/* Global */
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1rem /* Default font is 16px -> 1rem*/;
+    font-weight: 500;
+    line-height: 1.5;    
+}
+
+ol, ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+
+
+/* Container*/
+.container{
+    max-width: 70rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 5rem;
+    background-color: lightgrey;
+}
+
+/* Nav */
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Greet */
+.greet{
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Recent Achievement */
+.recent{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+/* Badges Card */
+.badge{
+    display: flex;
+    gap: 1rem;
+}
+
+.dynamic{
+    margin-bottom: 1rem;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    gap: 2rem;
+    background-color: lightgrey;
+}
+
+.achiever{
+    margin-bottom: 1rem;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background: #f0f0f0;
+  }
+
+
+  /* Footer */
+  footer{
+    padding: 1rem;
+    background-color: lightgrey;
+    text-align: center;
+  }
