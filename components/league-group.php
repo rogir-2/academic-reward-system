@@ -1,11 +1,13 @@
 <?php
 include 'INC/et.php'; //Login Credentials
 include 'css/main.css'; // Allows PHP to use CSS
-
+include 'INC/config.php'; // Config
 // Connect to Database
 $conn = new mysqli($DBIPAD, $DBUSER, $DBPASS,$DBINFO);
-$gid = $_GET["group"];
-$sql = "SELECT * FROM $iii WHERE groupref='$gid'  ORDER BY 'points' DESC";
+$gid = $_GET["group"];  
+if(isset($_GET["limit"]))
+{$limit = 5;}
+$sql = "SELECT * FROM $iii WHERE groupref='$gid' ORDER BY 'points' DESC LIMIT $limit";
 $results = $conn->query($sql);
 if($results->num_rows > 0) 
 {

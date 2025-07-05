@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 05, 2025 at 10:07 PM
+-- Generation Time: Jul 05, 2025 at 11:45 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -59,10 +59,36 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`muid`, `url`, `title`, `alt`, `label`, `seclvl`) VALUES
-(1, './index.php', 'Home', 'Home', 'Home', '0'),
-(2, './league.php', 'League', 'League', 'League Table', '1'),
+(1, './index.php?group=A0113', 'Home', 'Home', 'Home', '0'),
+(2, './league.php?group=A0113', 'League', 'League', 'League Table', '1'),
 (3, './myachieve.php', 'My Achievements', 'My Achievements', 'My Achievements', '1'),
 (4, './links.php', 'Useful Links', 'Useful Links', 'Useful Links', '0');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `uuid` int(11) NOT NULL,
+  `privlvl` text NOT NULL,
+  `usernick` text NOT NULL,
+  `userfirst` text NOT NULL,
+  `usermid` text NOT NULL,
+  `userlast` text NOT NULL,
+  `badges` text NOT NULL,
+  `points` text NOT NULL,
+  `groupref` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`uuid`, `privlvl`, `usernick`, `userfirst`, `usermid`, `userlast`, `badges`, `points`, `groupref`) VALUES
+(1, '1', 'MickeyMouse', 'Mickey', 'the', 'Mouse', 'Badge.DevDemo', '1852', 'A0113'),
+(2, '1', 'MinnieMouse', 'Minnie', 'the', 'Mouse', 'Badge.DevDemo', '1066', 'A0113');
 
 --
 -- Indexes for dumped tables
@@ -81,6 +107,12 @@ ALTER TABLE `menu`
   ADD PRIMARY KEY (`muid`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`uuid`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -95,6 +127,12 @@ ALTER TABLE `badges`
 --
 ALTER TABLE `menu`
   MODIFY `muid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `uuid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
