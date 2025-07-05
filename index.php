@@ -48,35 +48,8 @@
         </section>
 
         <section class="achiever">
-            <h3>Leaderboard</h3>
-            <table>
-                <th>Rank</th>
-                <th>Name</th>
-                <th>Points</th>
-                <th>Tier</th>
-
-                <tbody>
-                    <tr>
-                      <td data-label="Rank">1</td>
-                      <td data-label="Name">Alice</td>
-                      <td data-label="Points">1200</td>
-                      <td data-label="Tier">💍</td>
-                    </tr>
-                    <tr>
-                      <td data-label="Rank">2</td>
-                      <td data-label="Name">Bob</td>
-                      <td data-label="Points">950</td>
-                      <td data-label="Tier">⚱️</td>
-                    </tr>
-                    <tr>
-                      <td data-label="Rank">3</td>
-                      <td data-label="Name">Charlie</td>
-                      <td data-label="Points">870</td>
-                      <td data-label="Tier">🪙</td>
-                    </tr>
-                  </tbody>
-
-            </table>
+            <h3><?php echo 'GROUP NAME';?> Leaderboard</h3> <!-- [TODO: Upgrade to $GET group name] -->
+            <?php include 'components/league-group.php'; ?>
         </section>
     </main>
     <!-- end main -->
