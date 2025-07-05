@@ -1,3 +1,5 @@
+<style> 
+/* Stops PHP breaking CSS */
 /* Global */
 *, *::before, *::after{
     margin: 0;
@@ -107,3 +109,4 @@ table {
     background-color: lightgrey;
     text-align: center;
   }
+</style>
