@@ -49,7 +49,7 @@
 
         <section class="achiever">
             <h3><?php echo 'GROUP NAME';?> Leaderboard</h3> <!-- [TODO: Upgrade to $GET group name] -->
-            <?php include 'components/league-group.php'; ?>
+            <?php include 'components/league-group.php'; ?> <!-- Only present if ?group=something -->
         </section>
     </main>
     <!-- end main -->
