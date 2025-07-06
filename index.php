@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academicathlon</title>
+    <title><?php include 'components/INC/config.php'; echo $title;?></title>
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -11,7 +11,7 @@
     <!-- start header -->
     <header>
         <!-- title -->
-        <h1>Academicathlon</h1>
+        <h1><?php include 'components/INC/config.php'; echo $title;?></h1>
         <!-- navbar -->
         <?php include("./components/nav.php");?>
     </header>

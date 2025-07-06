@@ -20,12 +20,23 @@ if($results->num_rows > 0)
 	while($row = $results->fetch_assoc())
 	{
         $r++;
+        $tier = '⚠';
+        if($r >= 5)
+        {$tier = '🥉';}
+        elseif($r >= 4)
+        {$tier = '🥈';}
+        elseif($r >= 3)
+        {$tier = '🏅';}
+        elseif($r >= 2)
+        {$tier = '🅿';}
+        elseif($r >= 1)
+        {$tier = '💎';}
         echo '
         <tr>
             <td data-label="Rank">'.$r.'</td>
             <td data-label="Name">'.$row["usernick"].'</td>
             <td data-label="Points">'.$row["points"].'</td>
-            <td data-label="Tier">💍</td>
+            <td data-label="Tier">'.$tier.'</td>
         </tr>
         ';
 	}
