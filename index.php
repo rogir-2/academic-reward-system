@@ -41,10 +41,9 @@
         <section class="dynamic">
             <h2>Top Accolates</h2>
             <div class="box">
-                <?php include("./components/badge-card.php");?>
-                <?php include("./components/badge-card.php");?>
-                <?php include("./components/badge-card.php");?>
-                <?php include("./components/badge-card.php");?>
+                <!--<?php include("./components/badge-card.php");?> -->
+                <?php include 'components/curraco.php';?>
+            </div>
         </section>
 
         <section class="achiever">

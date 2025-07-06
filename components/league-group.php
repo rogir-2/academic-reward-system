@@ -1,3 +1,7 @@
+<!--
+Module - League Table by GROUP
+Desc - Displays the current league table for the users group
+-->
 <?php
 include 'INC/et.php'; //Login Credentials
 include 'css/main.css'; // Allows PHP to use CSS
